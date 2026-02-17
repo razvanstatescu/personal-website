@@ -29,7 +29,7 @@ export function Hero() {
             className="animate-fade-up mt-4 text-lg text-text-secondary font-light sm:text-xl md:text-2xl"
             style={{ animationDelay: "200ms" }}
           >
-            Building at the intersection of Web2&nbsp;and&nbsp;Web3
+            Turning ideas into products,&nbsp;in&nbsp;public
           </p>
 
           <p
