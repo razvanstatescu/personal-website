@@ -10,27 +10,29 @@ interface ProjectCardProps {
 export function ProjectCard({ project, variant = "featured" }: ProjectCardProps) {
   if (variant === "compact") {
     return (
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group block rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-border-hover hover:bg-surface-hover"
-      >
-        <div className="flex items-start justify-between">
-          <StatusBadge status={project.status} />
-          <ArrowUpRight className="h-4 w-4 text-text-muted transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
-        </div>
-        <h3 className="mt-4 text-xl font-semibold text-text">{project.name}</h3>
-        <p className="mt-1 text-sm text-text-secondary">{project.tagline}</p>
-        <p className="mt-3 font-mono text-xs text-text-muted">
-          {project.category}
-        </p>
-      </a>
+      <article>
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block rounded-xl border border-border bg-surface p-6 transition-all duration-300 hover:border-border-hover hover:bg-surface-hover"
+        >
+          <div className="flex items-start justify-between">
+            <StatusBadge status={project.status} />
+            <ArrowUpRight className="h-4 w-4 text-text-muted transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
+          </div>
+          <h3 className="mt-4 text-xl font-semibold text-text">{project.name}</h3>
+          <p className="mt-1 text-sm text-text-secondary">{project.tagline}</p>
+          <p className="mt-3 font-mono text-xs text-text-muted">
+            {project.category}
+          </p>
+        </a>
+      </article>
     );
   }
 
   return (
-    <div className="group rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-border-hover sm:p-8 md:p-10">
+    <article className="group rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:border-border-hover sm:p-8 md:p-10">
       <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
         {/* Content */}
         <div className="flex-1">
@@ -59,7 +61,7 @@ export function ProjectCard({ project, variant = "featured" }: ProjectCardProps)
                   key={feature}
                   className="flex items-start gap-2 text-sm text-text-muted"
                 >
-                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-border-hover" />
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-border-hover" />
                   {feature}
                 </li>
               ))}
@@ -78,12 +80,12 @@ export function ProjectCard({ project, variant = "featured" }: ProjectCardProps)
         </div>
 
         {/* Visual anchor */}
-        <div className="hidden flex-shrink-0 items-center justify-center rounded-xl border border-border bg-bg p-8 md:flex md:h-48 md:w-48 lg:h-56 lg:w-56">
+        <div className="hidden shrink-0 items-center justify-center rounded-xl border border-border bg-bg p-8 md:flex md:h-48 md:w-48 lg:h-56 lg:w-56">
           <span className="font-mono text-2xl font-bold text-text-muted/30 lg:text-3xl">
             {project.name.toLowerCase()}
           </span>
         </div>
       </div>
-    </div>
+    </article>
   );
 }

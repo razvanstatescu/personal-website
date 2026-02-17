@@ -9,7 +9,7 @@ const links = [
 
 export function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 hidden md:block border-b border-border bg-bg/80 backdrop-blur-md">
+    <nav aria-label="Main navigation" className="fixed top-0 left-0 right-0 z-40 hidden md:block border-b border-border bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
         <a
           href="#"

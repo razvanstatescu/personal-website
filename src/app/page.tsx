@@ -11,8 +11,10 @@ import { Divider } from "@/components/divider";
 export default function Home() {
   return (
     <>
-      <Nav />
-      <main className="relative overflow-x-hidden">
+      <header>
+        <Nav />
+      </header>
+      <main className="relative overflow-x-clip">
         <Hero />
 
         {/* Ambient glow between hero and about */}
@@ -49,9 +51,10 @@ export default function Home() {
             className="-top-24 left-1/4 h-64 w-[400px]"
           />
         </div>
-
-        <Contact />
       </main>
+      <footer>
+        <Contact />
+      </footer>
     </>
   );
 }
