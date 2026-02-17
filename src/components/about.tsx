@@ -21,10 +21,10 @@ export function About() {
 
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
           <p>
-            I&apos;m a founder and indie hacker who loves building products from
-            the ground up. Whether it&apos;s a mobile app, a SaaS tool, or a
-            blockchain protocol — I enjoy the entire journey from idea to
-            shipped product.
+            I&apos;m a founder and indie hacker who loves building in public —
+            taking products from idea to launch and sharing the journey along
+            the way. Whether it&apos;s a mobile app, a SaaS tool, or a
+            blockchain protocol — I enjoy the entire process.
           </p>
           <p>
             My work spans two worlds: Web2 and Web3. On the Web2 side, I build
@@ -33,7 +33,7 @@ export function About() {
             platforms, and publishing tools with a team.
           </p>
           <p>
-            I believe in shipping fast, learning from real users, and building
+            I believe in shipping fast, learning from real users, and iterating
             in the open. I&apos;m always looking for interesting problems to
             solve and people to collaborate with.
           </p>

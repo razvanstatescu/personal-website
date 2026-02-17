@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     template: "%s | Razvan Statescu",
   },
   description:
-    "Building at the intersection of Web2 and Web3. Mobile apps, SaaS products, and decentralized protocols on Sui.",
+    "Founder and indie hacker building in public. Shipping AI-powered mobile apps, SaaS products, and Web3 protocols.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Razvan Statescu — Founder & Builder",
     description:
-      "Founder building mobile apps, SaaS, and Web3 protocols on Sui.",
+      "Founder & indie hacker shipping AI-powered apps, SaaS, and Web3 protocols. Building in public.",
     url: "https://razvanstatescu.com",
     siteName: "Razvan Statescu",
     locale: "en_US",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Razvan Statescu — Founder & Builder",
     description:
-      "Founder building mobile apps, SaaS, and Web3 protocols on Sui.",
+      "Founder & indie hacker shipping AI-powered apps, SaaS, and Web3 protocols. Building in public.",
     creator: "@StatescuRazvan",
   },
   robots: {
@@ -59,9 +59,9 @@ const jsonLd = {
   name: "Razvan Statescu",
   url: "https://razvanstatescu.com",
   image: "https://razvanstatescu.com/headshot.jpg",
-  jobTitle: "Founder & Builder",
+  jobTitle: "Founder & Indie Hacker",
   description:
-    "Founder building mobile apps, SaaS products, and decentralized protocols on Sui.",
+    "Founder and indie hacker shipping AI-powered apps, SaaS products, and Web3 protocols. Building in public.",
   sameAs: [
     "https://x.com/StatescuRazvan",
     "https://www.linkedin.com/in/razvanstatescu/",
@@ -73,6 +73,12 @@ const jsonLd = {
     "SaaS",
     "Mobile Apps",
     "DeFi",
+    "AI",
+    "Build in Public",
+    "Full Stack Development",
+    "Move",
+    "React",
+    "TypeScript",
   ],
 };
 

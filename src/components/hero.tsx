@@ -36,8 +36,8 @@ export function Hero() {
             className="animate-fade-up mt-6 max-w-lg text-base text-text-muted leading-relaxed"
             style={{ animationDelay: "300ms" }}
           >
-            Founder shipping mobile apps, SaaS products, and decentralized
-            protocols on the Sui blockchain.
+            Founder building in public — shipping AI-powered apps, SaaS
+            products, and Web3 protocols.
           </p>
 
           {/* Socials + CTA */}

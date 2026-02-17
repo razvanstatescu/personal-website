@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Project } from "@/lib/data";
 import { StatusBadge } from "@/components/status-badge";
 import { ArrowUpRight } from "@/components/social-icons";
@@ -79,11 +80,21 @@ export function ProjectCard({ project, variant = "featured" }: ProjectCardProps)
           </a>
         </div>
 
-        {/* Visual anchor */}
-        <div className="hidden shrink-0 items-center justify-center rounded-xl border border-border bg-bg p-8 md:flex md:h-48 md:w-48 lg:h-56 lg:w-56">
-          <span className="font-mono text-2xl font-bold text-text-muted/30 lg:text-3xl">
-            {project.name.toLowerCase()}
-          </span>
+        {/* Project icon */}
+        <div className="hidden shrink-0 items-center justify-center rounded-xl border border-border bg-white p-6 md:flex md:h-48 md:w-48 lg:h-56 lg:w-56">
+          {project.icon ? (
+            <Image
+              src={project.icon}
+              alt={`${project.name} logo`}
+              width={180}
+              height={180}
+              className={project.iconClassName ?? "h-auto w-32 object-contain lg:w-40"}
+            />
+          ) : (
+            <span className="font-mono text-2xl font-bold text-text-muted/30 lg:text-3xl">
+              {project.name.toLowerCase()}
+            </span>
+          )}
         </div>
       </div>
     </article>

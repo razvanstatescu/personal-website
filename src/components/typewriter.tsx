@@ -5,9 +5,9 @@ import { useEffect, useState, useCallback } from "react";
 const phrases = [
   "founder & builder",
   "indie hacker",
-  "blockchain developer",
+  "building in public",
   "shipping products",
-  "sui ecosystem builder",
+  "full stack builder",
 ];
 
 const TYPING_SPEED = 80;

@@ -9,6 +9,8 @@ export interface Project {
   category: string;
   features?: string[];
   highlight?: string;
+  icon?: string;
+  iconClassName?: string;
 }
 
 export const featuredProjects: Project[] = [
@@ -20,6 +22,7 @@ export const featuredProjects: Project[] = [
     url: "https://preplo.app",
     status: "coming-soon",
     category: "Web2 / Mobile App / SaaS",
+    icon: "/preplo.jpg",
     features: [
       "Video-to-recipe extraction from any platform",
       "AI recipe customization and adaptation",
@@ -35,6 +38,8 @@ export const featuredProjects: Project[] = [
     url: "https://inkray.xyz",
     status: "testnet",
     category: "Web3 / Sui",
+    icon: "/inkray.png",
+    iconClassName: "h-auto w-24 object-contain lg:w-32",
     features: [
       "On-chain content Vaults for true ownership",
       "Walrus decentralized storage integration",

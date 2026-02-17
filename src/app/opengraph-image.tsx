@@ -107,7 +107,7 @@ export default async function Image() {
               fontWeight: 700,
             }}
           >
-            Building at the intersection of Web2 and Web3
+            Founder & indie hacker building in public
           </p>
 
           <div
@@ -117,9 +117,9 @@ export default async function Image() {
               marginTop: "24px",
             }}
           >
-            {["Preplo", "Inkray", "CoinFever", "CoinDrip"].map((name) => (
+            {["founder", "build in public", "indie hacker", "shipping products", "AI & SaaS", "Web3"].map((keyword) => (
               <div
-                key={name}
+                key={keyword}
                 style={{
                   display: "flex",
                   padding: "6px 16px",
@@ -129,7 +129,7 @@ export default async function Image() {
                   color: "#71717a",
                 }}
               >
-                {name}
+                {keyword}
               </div>
             ))}
           </div>
