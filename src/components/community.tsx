@@ -7,7 +7,7 @@ export function Community() {
   const { ref, isInView } = useInView();
 
   return (
-    <Section id="community">
+    <Section id="community" className="pb-10 md:pb-16">
       <div
         ref={ref}
         className={`mx-auto max-w-2xl transition-all duration-700 ease-out ${

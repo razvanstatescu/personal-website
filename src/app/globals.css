@@ -85,3 +85,35 @@ body::after {
 .animate-blink {
   animation: blink 1s step-end infinite;
 }
+
+/* ---- Animated gradient border ---- */
+@keyframes border-rotate {
+  0% { --border-angle: 0deg; }
+  100% { --border-angle: 360deg; }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.animated-border {
+  --border-angle: 0deg;
+  animation: border-rotate 6s linear infinite;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+    conic-gradient(
+      from var(--border-angle),
+      transparent 30%,
+      var(--color-accent) 50%,
+      transparent 70%
+    ) border-box;
+}
+
+/* ---- Dot grid pattern ---- */
+.dot-grid {
+  background-image: radial-gradient(circle, var(--color-border-hover) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
