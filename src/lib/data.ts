@@ -41,7 +41,7 @@ export const featuredProjects: Project[] = [
       "Creator-first monetization model",
       "Full censorship resistance",
     ],
-    highlight: "$80K Walrus Grant",
+    highlight: "Walrus Grant Recipient",
   },
 ];
 
@@ -72,7 +72,8 @@ export const techStack = [
   "React Native",
   "Next.js",
   "NestJS",
-  "Sui / Move",
+  "Sui",
+  "Move",
   "PostgreSQL",
   "Redis",
   "AWS",
@@ -80,6 +81,20 @@ export const techStack = [
   "Node.js",
   "Tailwind CSS",
   "Docker",
+];
+
+export interface Tool {
+  name: string;
+  url: string;
+  icon: string; // URL to favicon or logo
+}
+
+export const tools: Tool[] = [
+  {
+    name: "Plausible",
+    url: "https://plausible.io",
+    icon: "https://plausible.io/favicon-32x32.png",
+  },
 ];
 
 export const socials = {

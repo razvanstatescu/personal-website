@@ -11,8 +11,8 @@ export function FeaturedProjects() {
   return (
     <Section id="projects">
       <div ref={ref}>
-        <p className="font-mono text-sm uppercase tracking-widest text-accent">
-          Projects
+        <p className="font-mono text-sm text-accent">
+          // projects
         </p>
         <h2 className="mt-4 text-3xl font-bold text-text">What I&apos;m building</h2>
 

@@ -14,8 +14,8 @@ export function Community() {
           isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
-        <p className="font-mono text-sm uppercase tracking-widest text-accent">
-          Community
+        <p className="font-mono text-sm text-accent">
+          // community
         </p>
         <h2 className="mt-4 text-3xl font-bold text-text">
           Teaching &amp; mentoring

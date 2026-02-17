@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { socials } from "@/lib/data";
 import { XIcon, LinkedInIcon, ChevronDown } from "@/components/social-icons";
+import { Typewriter } from "@/components/typewriter";
 
 export function Hero() {
   return (
@@ -10,12 +11,12 @@ export function Hero() {
       <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-12 md:gap-16">
         {/* Text */}
         <div className="flex-1">
-          <p
-            className="animate-fade-up font-mono text-sm text-accent"
+          <div
+            className="animate-fade-up font-mono text-sm"
             style={{ animationDelay: "0ms" }}
           >
-            // founder &amp; builder
-          </p>
+            <Typewriter className="text-accent" />
+          </div>
 
           <h1
             className="animate-fade-up mt-4 text-4xl font-bold tracking-tight text-text sm:text-5xl md:text-6xl lg:text-7xl"
