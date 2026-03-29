@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Project } from "@/lib/data";
 import { StatusBadge } from "@/components/status-badge";
-import { ArrowUpRight } from "@/components/social-icons";
+import { ArrowUpRight, AppleIcon } from "@/components/social-icons";
 
 interface ProjectCardProps {
   project: Project;
@@ -69,15 +69,28 @@ export function ProjectCard({ project, variant = "featured" }: ProjectCardProps)
             </ul>
           )}
 
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-hover"
-          >
-            Visit {project.name}
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm font-medium text-accent transition-colors duration-200 hover:text-accent-hover"
+            >
+              Visit {project.name}
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+            {project.appStoreUrl && (
+              <a
+                href={project.appStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition-opacity duration-200 hover:opacity-80"
+              >
+                <AppleIcon className="h-4 w-4" />
+                Download on the App Store
+              </a>
+            )}
+          </div>
         </div>
 
         {/* Project icon */}

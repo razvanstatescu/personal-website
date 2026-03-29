@@ -11,6 +11,7 @@ export interface Project {
   highlight?: string;
   icon?: string;
   iconClassName?: string;
+  appStoreUrl?: string;
 }
 
 export const featuredProjects: Project[] = [
@@ -20,9 +21,10 @@ export const featuredProjects: Project[] = [
     description:
       "Converts cooking videos from YouTube, TikTok, and Instagram into structured recipes with AI customization, hands-free cook mode, and smart shopping lists.",
     url: "https://preplo.app",
-    status: "coming-soon",
+    status: "live",
     category: "Web2 / Mobile App / SaaS",
     icon: "/preplo.jpg",
+    appStoreUrl: "https://apps.apple.com/us/app/preplo-recipes-from-videos/id6758678654",
     features: [
       "Video-to-recipe extraction from any platform",
       "AI recipe customization and adaptation",
