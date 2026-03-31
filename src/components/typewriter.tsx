@@ -3,11 +3,11 @@
 import { useEffect, useState, useCallback } from "react";
 
 const phrases = [
-  "product engineer",
+  "founder & indie hacker",
   "building in public",
   "shipped to the app store",
   "react native + nestjs",
-  "founding engineer",
+  "loves writing code",
 ];
 
 const TYPING_SPEED = 80;

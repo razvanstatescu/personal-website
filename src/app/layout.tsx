@@ -16,18 +16,18 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://statescu.net"),
   title: {
-    default: "Razvan Statescu — Product Engineer",
+    default: "Razvan Statescu — Founder & Indie Hacker",
     template: "%s | Razvan Statescu",
   },
   description:
-    "Product engineer building in public. Shipping AI-powered apps and SaaS products end to end. Winner of RevenueCat's Shipyard Creator Contest 2026. Seeking founding engineer roles.",
+    "Founder and indie hacker building products from zero to launch. Shipping AI-powered apps and SaaS products end to end. Winner of RevenueCat's Shipyard Creator Contest 2026. Building in public.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Razvan Statescu — Product Engineer",
+    title: "Razvan Statescu — Founder & Indie Hacker",
     description:
-      "Product engineer shipping AI-powered apps and SaaS products end to end. Building in public.",
+      "Founder and indie hacker shipping AI-powered apps and SaaS products end to end. Building in public.",
     url: "https://statescu.net",
     siteName: "Razvan Statescu",
     locale: "en_US",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Razvan Statescu — Product Engineer",
+    title: "Razvan Statescu — Founder & Indie Hacker",
     description:
-      "Product engineer shipping AI-powered apps and SaaS products end to end. Building in public.",
+      "Founder and indie hacker shipping AI-powered apps and SaaS products end to end. Building in public.",
     creator: "@StatescuRazvan",
   },
   robots: {
@@ -60,15 +60,15 @@ const jsonLd = {
   name: "Razvan Statescu",
   url: "https://statescu.net",
   image: "https://statescu.net/headshot.jpg",
-  jobTitle: "Product Engineer",
+  jobTitle: "Founder & Indie Hacker",
   description:
-    "Product engineer shipping AI-powered apps and SaaS products end to end. Building in public. Winner of RevenueCat's Shipyard Creator Contest 2026. Seeking founding engineer roles.",
+    "Founder and indie hacker building products from zero to launch. Shipping AI-powered apps and SaaS products end to end. Winner of RevenueCat's Shipyard Creator Contest 2026. Building in public.",
   sameAs: [
     "https://x.com/StatescuRazvan",
     "https://www.linkedin.com/in/razvanstatescu/",
   ],
   knowsAbout: [
-    "Product Engineering",
+    "Indie Hacking",
     "React",
     "React Native",
     "TypeScript",
@@ -79,7 +79,7 @@ const jsonLd = {
     "Full Stack Development",
     "Build in Public",
     "Startups",
-    "Product Management",
+    "Entrepreneurship",
   ],
 };
 

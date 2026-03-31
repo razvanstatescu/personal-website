@@ -79,10 +79,11 @@ export function About() {
 
         <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
           <p>
-            I&apos;m a product engineer with close to a decade of experience
-            shipping software end to end — from architecture to App Store. I
-            thrive in small teams and early-stage environments where wearing
-            multiple hats is the norm.
+            I&apos;m a founder and indie hacker with close to a decade of
+            experience building and shipping software — from architecture to App
+            Store. I&apos;ve freelanced, co-founded companies, and built
+            products solo. I love writing code and staying deep in the technical
+            details.
           </p>
           <p>
             Most recently I built Preplo, an AI-powered cooking companion —
@@ -93,10 +94,10 @@ export function About() {
             programs.
           </p>
           <p>
-            I&apos;m looking for my next role as a founding engineer at an
-            early-stage startup — somewhere I can own the product end to end
-            and ship fast. I also bring strong developer community chops: 10+
-            bootcamps, hackathon mentoring, and technical content on{" "}
+            I&apos;m always building something new — whether it&apos;s a solo
+            product, a side project, or an idea I can&apos;t stop thinking
+            about. I also give back to the developer community through
+            bootcamps, hackathon mentoring, and technical writing on{" "}
             <a
               href="https://medium.com/@razvanst"
               target="_blank"

@@ -38,15 +38,15 @@ export function Contact() {
             <p className="font-mono text-sm text-accent">// contact</p>
 
             <h2 className="mt-6 text-4xl font-bold tracking-tight text-text sm:text-5xl md:text-6xl">
-              Let&apos;s work
+              Let&apos;s build
               <br />
-              <span className="text-accent">together</span>
+              <span className="text-accent">something</span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-text-secondary">
-              Seeking a founding engineer role at an early-stage startup. If
-              you&apos;re building something interesting and need an engineer
-              who ships end to end — let&apos;s talk.
+              I&apos;m open to collaborations, consulting, and interesting
+              projects. If you&apos;re building something ambitious and need a
+              technical co-founder or a hands-on builder — let&apos;s talk.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
