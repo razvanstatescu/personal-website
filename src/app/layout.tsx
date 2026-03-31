@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Razvan Statescu",
   },
   description:
-    "Product engineer building in public. Shipping AI-powered apps and SaaS products end to end. RevenueCat Shipyard 2026 Winner.",
+    "Product engineer building in public. Shipping AI-powered apps and SaaS products end to end. Winner of RevenueCat's Shipyard Creator Contest 2026. Seeking founding engineer roles.",
   alternates: {
     canonical: "/",
   },
@@ -62,7 +62,7 @@ const jsonLd = {
   image: "https://statescu.net/headshot.jpg",
   jobTitle: "Product Engineer",
   description:
-    "Product engineer shipping AI-powered apps and SaaS products end to end. Building in public. RevenueCat Shipyard 2026 Winner.",
+    "Product engineer shipping AI-powered apps and SaaS products end to end. Building in public. Winner of RevenueCat's Shipyard Creator Contest 2026. Seeking founding engineer roles.",
   sameAs: [
     "https://x.com/StatescuRazvan",
     "https://www.linkedin.com/in/razvanstatescu/",
@@ -78,8 +78,8 @@ const jsonLd = {
     "Mobile Apps",
     "Full Stack Development",
     "Build in Public",
-    "Developer Relations",
-    "Developer Education",
+    "Startups",
+    "Product Management",
   ],
 };
 

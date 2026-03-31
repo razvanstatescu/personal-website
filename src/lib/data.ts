@@ -101,4 +101,5 @@ export const tools: Tool[] = [
 export const socials = {
   twitter: "https://x.com/StatescuRazvan",
   linkedin: "https://www.linkedin.com/in/razvanstatescu/",
+  email: "razvan@statescu.net",
 };

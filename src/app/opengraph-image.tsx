@@ -117,7 +117,7 @@ export default async function Image() {
               marginTop: "24px",
             }}
           >
-            {["product engineer", "build in public", "react native", "AI apps", "founding engineer", "devrel"].map((keyword) => (
+            {["product engineer", "build in public", "react native", "AI apps", "founding engineer", "shipped solo"].map((keyword) => (
               <div
                 key={keyword}
                 style={{

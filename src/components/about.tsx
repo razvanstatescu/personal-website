@@ -49,13 +49,22 @@ const PATH_D =
 const NODE_X = [60, 275, 500, 725, 940];
 const NODE_Y = [100, 40, 100, 40, 100];
 
+/* Mobile vertical S-curve: viewBox 0 0 200 900, nodes evenly spaced at y = 100, 280, 460, 640, 820 */
+const MOBILE_PATH_D =
+  "M 100 100 C 100 160, 40 160, 40 280 S 100 400, 100 460 S 160 520, 160 640 S 100 760, 100 820";
+const MOBILE_NODE_X = [100, 40, 100, 160, 100];
+const MOBILE_NODE_Y = [100, 280, 460, 640, 820];
+
 export function About() {
   const [hoveredNode, setHoveredNode] = useState<number | null>(null);
+  const [tappedNode, setTappedNode] = useState<number | null>(null);
   const { ref, isInView } = useInView();
   const { ref: timelineRef, isInView: timelineInView } = useInView(0.05);
 
-  /* The clip rect x extends to the hovered node's x in viewBox coords */
+  /* Desktop: clip rect x extends to the hovered node's x in viewBox coords */
   const clipX = hoveredNode !== null ? NODE_X[hoveredNode] : 0;
+  /* Mobile: clip rect height extends to the tapped node's y */
+  const clipY = tappedNode !== null ? MOBILE_NODE_Y[tappedNode] : 0;
 
   return (
     <Section id="about">
@@ -84,10 +93,19 @@ export function About() {
             programs.
           </p>
           <p>
-            I&apos;m looking for my next role as a founding engineer or in
-            developer relations — somewhere I can ship product and help grow a
-            developer community. I believe in building in the open, learning
-            from real users, and iterating fast.
+            I&apos;m looking for my next role as a founding engineer at an
+            early-stage startup — somewhere I can own the product end to end
+            and ship fast. I also bring strong developer community chops: 10+
+            bootcamps, hackathon mentoring, and technical content on{" "}
+            <a
+              href="https://medium.com/@razvanst"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent underline decoration-accent/30 underline-offset-2 transition-colors hover:decoration-accent"
+            >
+              Medium
+            </a>
+            .
           </p>
         </div>
       </div>
@@ -244,59 +262,138 @@ export function About() {
           </div>
         </div>
 
-        {/* Mobile timeline — vertical */}
+        {/* Mobile timeline — vertical S-curve */}
         <div className="block md:hidden">
-          <div className="relative pl-8">
-            {/* Vertical line */}
-            <div
-              className="absolute top-2 bottom-2 left-2 w-px bg-border transition-all duration-1000 ease-out origin-top"
-              style={{
-                transform: timelineInView ? "scaleY(1)" : "scaleY(0)",
-              }}
-            />
+          <div className="relative overflow-visible" style={{ height: 820 }}>
+            {/* Vertical curved SVG */}
+            <svg
+              className="absolute inset-0 w-full h-full"
+              viewBox="0 0 200 900"
+              preserveAspectRatio="none"
+              fill="none"
+            >
+              <defs>
+                <clipPath id="mobile-timeline-clip">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="200"
+                    height={clipY}
+                    style={{
+                      transition:
+                        "height 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+                    }}
+                  />
+                </clipPath>
+              </defs>
 
-            <div className="space-y-8">
-              {journey.map((item, i) => {
-                const isActive = !!item.active;
-                return (
+              {/* Base path */}
+              <path
+                d={MOBILE_PATH_D}
+                stroke="var(--color-border)"
+                strokeWidth="1.5"
+                vectorEffect="non-scaling-stroke"
+                style={{
+                  opacity: timelineInView ? 1 : 0,
+                  transition: "opacity 1s ease",
+                }}
+              />
+
+              {/* Accent path — clipped to tapped node */}
+              <path
+                d={MOBILE_PATH_D}
+                stroke="var(--color-accent)"
+                strokeWidth="1.5"
+                vectorEffect="non-scaling-stroke"
+                clipPath="url(#mobile-timeline-clip)"
+                style={{
+                  opacity: tappedNode !== null ? 0.5 : 0,
+                  transition: "opacity 0.3s ease",
+                }}
+              />
+            </svg>
+
+            {/* Nodes */}
+            {journey.map((item, i) => {
+              const isActive = !!item.active;
+              const isTapped = tappedNode === i;
+              const isMobilePast =
+                tappedNode !== null && i < tappedNode;
+              const mxPct = (MOBILE_NODE_X[i] / 200) * 100;
+              const myPct = (MOBILE_NODE_Y[i] / 900) * 100;
+              /* Labels go to the right when node is on left side, and vice versa */
+              const labelRight = MOBILE_NODE_X[i] <= 100;
+
+              return (
+                <div
+                  key={`mobile-${item.year}`}
+                  className={`absolute transition-all duration-500 ease-out ${
+                    isTapped ? "z-40" : "z-10"
+                  } ${timelineInView ? "opacity-100" : "opacity-0"}`}
+                  style={{
+                    left: `${mxPct}%`,
+                    top: `${myPct}%`,
+                    transform: "translate(-50%, -50%)",
+                    transitionDelay: `${i * 120 + 300}ms`,
+                  }}
+                  onClick={() =>
+                    setTappedNode(isTapped ? null : i)
+                  }
+                >
+                  {/* Dot */}
+                  <div className="relative flex items-center justify-center">
+                    {(isActive || isTapped) && (
+                      <span className="absolute h-7 w-7 rounded-full bg-accent/15 animate-pulse-dot" />
+                    )}
+                    <span
+                      className={`relative z-10 block rounded-full border-2 transition-colors duration-300 ${
+                        isActive || isTapped
+                          ? "h-4 w-4 border-accent bg-accent/30"
+                          : isMobilePast
+                            ? "h-3 w-3 border-accent/60 bg-accent/15"
+                            : "h-3 w-3 border-border-hover bg-surface"
+                      }`}
+                    />
+                  </div>
+
+                  {/* Label — positioned left or right of the dot, anchored at top */}
                   <div
-                    key={item.year}
-                    className={`relative transition-all duration-500 ease-out ${
-                      timelineInView
-                        ? "opacity-100 translate-x-0"
-                        : "opacity-0 -translate-x-3"
+                    className={`absolute top-0 -translate-y-2 ${
+                      labelRight ? "left-full ml-4" : "right-full mr-4"
                     }`}
-                    style={{ transitionDelay: `${i * 120 + 200}ms` }}
                   >
-                    {/* Dot */}
-                    <div className="absolute -left-8 top-1 flex items-center justify-center">
-                      {isActive && (
-                        <span className="absolute h-6 w-6 rounded-full bg-accent/15 animate-pulse-dot" />
-                      )}
-                      <span
-                        className={`relative z-10 block rounded-full border-2 ${
-                          isActive
-                            ? "h-3.5 w-3.5 border-accent bg-accent/30"
-                            : "h-2.5 w-2.5 border-border-hover bg-surface"
-                        }`}
-                      />
-                    </div>
-
-                    <span className="font-mono text-xs text-accent">
+                    <span className={`font-mono text-xs text-accent ${labelRight ? "" : "block text-right"}`}>
                       {item.year}
                     </span>
                     <p
-                      className={`text-sm font-medium ${
+                      className={`text-sm font-medium whitespace-nowrap ${
                         isActive ? "text-text" : "text-text-secondary"
-                      }`}
+                      } ${labelRight ? "" : "text-right"}`}
                     >
                       {item.title}
                     </p>
-                    <p className="text-xs text-text-muted">{item.desc}</p>
+                    <p className={`text-xs text-text-muted whitespace-nowrap ${labelRight ? "" : "text-right"}`}>
+                      {item.desc}
+                    </p>
+
+                    {/* Expanded detail on tap */}
+                    <div
+                      className={`overflow-hidden transition-all duration-300 ease-out ${
+                        isTapped
+                          ? "mt-2 max-h-48 opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
+                    >
+                      <div className="rounded-lg border border-border/60 bg-surface/95 backdrop-blur-md p-3">
+                        <p className="max-w-52 text-xs leading-relaxed text-text-muted whitespace-normal">
+                          {item.detail}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

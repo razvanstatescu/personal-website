@@ -5,7 +5,7 @@ import { useEffect, useState, useCallback } from "react";
 const phrases = [
   "product engineer",
   "building in public",
-  "open to opportunities",
+  "shipped to the app store",
   "react native + nestjs",
   "founding engineer",
 ];

@@ -37,8 +37,8 @@ export function Hero() {
             style={{ animationDelay: "300ms" }}
           >
             I ship AI-powered apps and SaaS products from zero to launch.
-            Most recently Preplo — a RevenueCat Shipyard 2026 Winner. Open
-            to new opportunities.
+            Most recently Preplo — winner of RevenueCat&apos;s Shipyard
+            Creator Contest 2026. Seeking my next founding engineer role.
           </p>
 
           {/* Socials + CTA */}

@@ -44,20 +44,26 @@ export function Contact() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-md text-lg leading-relaxed text-text-secondary">
-              Looking for a founding engineer role or a developer relations
-              position. Open to interesting conversations about building
-              products and growing developer communities.
+              Seeking a founding engineer role at an early-stage startup. If
+              you&apos;re building something interesting and need an engineer
+              who ships end to end — let&apos;s talk.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
+                href={`mailto:${socials.email}`}
+                className="group inline-flex items-center gap-2.5 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-bg transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_24px_rgba(245,158,11,0.3)]"
+              >
+                {socials.email}
+              </a>
+              <a
                 href={socials.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-bg transition-all duration-300 hover:bg-accent-hover hover:shadow-[0_0_24px_rgba(245,158,11,0.3)]"
+                className="inline-flex items-center gap-2.5 rounded-full border border-border px-7 py-3.5 text-sm text-text-secondary transition-all duration-300 hover:border-border-hover hover:text-text hover:bg-surface-hover"
               >
                 <XIcon className="h-4 w-4" />
-                Reach out on X
+                Twitter
               </a>
               <a
                 href={socials.linkedin}
