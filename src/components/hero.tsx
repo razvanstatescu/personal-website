@@ -7,7 +7,7 @@ import { Typewriter } from "@/components/typewriter";
 
 export function Hero() {
   return (
-    <section className="px-6 pt-32 pb-20 md:pt-40 md:pb-32 mx-auto max-w-5xl">
+    <section className="px-6 pt-32 pb-12 md:pt-40 md:pb-20 mx-auto max-w-5xl">
       <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-12 md:gap-16">
         {/* Text */}
         <div className="flex-1">
