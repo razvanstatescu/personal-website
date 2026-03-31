@@ -14,30 +14,30 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://razvanstatescu.com"),
+  metadataBase: new URL("https://statescu.net"),
   title: {
-    default: "Razvan Statescu — Founder & Builder",
+    default: "Razvan Statescu — Product Engineer",
     template: "%s | Razvan Statescu",
   },
   description:
-    "Founder and indie hacker building in public. Shipping AI-powered mobile apps, SaaS products, and Web3 protocols.",
+    "Product engineer building in public. Shipping AI-powered apps and SaaS products end to end. RevenueCat Shipyard 2026 Winner.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Razvan Statescu — Founder & Builder",
+    title: "Razvan Statescu — Product Engineer",
     description:
-      "Founder & indie hacker shipping AI-powered apps, SaaS, and Web3 protocols. Building in public.",
-    url: "https://razvanstatescu.com",
+      "Product engineer shipping AI-powered apps and SaaS products end to end. Building in public.",
+    url: "https://statescu.net",
     siteName: "Razvan Statescu",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Razvan Statescu — Founder & Builder",
+    title: "Razvan Statescu — Product Engineer",
     description:
-      "Founder & indie hacker shipping AI-powered apps, SaaS, and Web3 protocols. Building in public.",
+      "Product engineer shipping AI-powered apps and SaaS products end to end. Building in public.",
     creator: "@StatescuRazvan",
   },
   robots: {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  authors: [{ name: "Razvan Statescu", url: "https://razvanstatescu.com" }],
+  authors: [{ name: "Razvan Statescu", url: "https://statescu.net" }],
   creator: "Razvan Statescu",
 };
 
@@ -58,28 +58,28 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Razvan Statescu",
-  url: "https://razvanstatescu.com",
-  image: "https://razvanstatescu.com/headshot.jpg",
-  jobTitle: "Founder & Indie Hacker",
+  url: "https://statescu.net",
+  image: "https://statescu.net/headshot.jpg",
+  jobTitle: "Product Engineer",
   description:
-    "Founder and indie hacker shipping AI-powered apps, SaaS products, and Web3 protocols. Building in public.",
+    "Product engineer shipping AI-powered apps and SaaS products end to end. Building in public. RevenueCat Shipyard 2026 Winner.",
   sameAs: [
     "https://x.com/StatescuRazvan",
     "https://www.linkedin.com/in/razvanstatescu/",
   ],
   knowsAbout: [
-    "Web Development",
-    "Blockchain",
-    "Sui",
+    "Product Engineering",
+    "React",
+    "React Native",
+    "TypeScript",
+    "NestJS",
+    "AI",
     "SaaS",
     "Mobile Apps",
-    "DeFi",
-    "AI",
-    "Build in Public",
     "Full Stack Development",
-    "Move",
-    "React",
-    "TypeScript",
+    "Build in Public",
+    "Developer Relations",
+    "Developer Education",
   ],
 };
 

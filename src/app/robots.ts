@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://razvanstatescu.com/sitemap.xml",
+    sitemap: "https://statescu.net/sitemap.xml",
   };
 }

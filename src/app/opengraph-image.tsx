@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Razvan Statescu — Founder & Builder";
+export const alt = "Razvan Statescu — Product Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -84,7 +84,7 @@ export default async function Image() {
               letterSpacing: "0.05em",
             }}
           >
-            // founder &amp; builder
+            // product engineer
           </p>
 
           <h1
@@ -107,7 +107,7 @@ export default async function Image() {
               fontWeight: 700,
             }}
           >
-            Founder & indie hacker building in public
+            Product engineer building in public
           </p>
 
           <div
@@ -117,7 +117,7 @@ export default async function Image() {
               marginTop: "24px",
             }}
           >
-            {["founder", "build in public", "indie hacker", "shipping products", "AI & SaaS", "Web3"].map((keyword) => (
+            {["product engineer", "build in public", "react native", "AI apps", "founding engineer", "devrel"].map((keyword) => (
               <div
                 key={keyword}
                 style={{

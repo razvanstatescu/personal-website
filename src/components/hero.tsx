@@ -29,15 +29,16 @@ export function Hero() {
             className="animate-fade-up mt-4 text-lg text-text-secondary font-light sm:text-xl md:text-2xl"
             style={{ animationDelay: "200ms" }}
           >
-            Turning ideas into products,&nbsp;in&nbsp;public
+            Product engineer who ships end&nbsp;to&nbsp;end
           </p>
 
           <p
             className="animate-fade-up mt-6 max-w-lg text-base text-text-muted leading-relaxed"
             style={{ animationDelay: "300ms" }}
           >
-            Founder building in public — shipping AI-powered apps, SaaS
-            products, and Web3 protocols.
+            I ship AI-powered apps and SaaS products from zero to launch.
+            Most recently Preplo — a RevenueCat Shipyard 2026 Winner. Open
+            to new opportunities.
           </p>
 
           {/* Socials + CTA */}
